@@ -1,0 +1,65 @@
+
+<ion-content>
+  <header>
+                  <!-- <ion-menu-button style="color:#fff"></ion-menu-button> --><br>
+                  <ion-img src="/assets/images/header.jpeg"></ion-img>
+  </header>
+  <h2>Extended family details?</h2>
+  <form [formGroup]="buynow" >
+  
+      <ion-item>
+                         
+          <ion-label position="floating">Name(s)</ion-label>
+          <ion-input type="text" formControlName="name" minlength="3" maxlength="25" required></ion-input>
+        </ion-item>
+          <ion-text color="danger">
+                  <p color="danger" style="margin-left: 5%;">{{nameErr}}</p>
+          </ion-text>
+        <ion-item>
+          <ion-label position="floating">Surname</ion-label> 
+          <ion-input type="text" formControlName="surname" minlength="3" maxlength="25" required></ion-input>
+        </ion-item>
+              <ion-text color="danger">
+                  <p color="danger" style="margin-left: 5%;">{{surnameErr}}</p>
+          </ion-text>
+        <ion-item>
+           
+          <ion-label position="floating">RSA ID Number</ion-label>
+          <ion-input type="text" formControlName="idNum" minlength="13" maxlength="13" required></ion-input>
+        
+              <ion-text color="danger">
+                  <p color="danger" style="margin-left: 5%;">{{idnumErr}}</p>
+          </ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-select class="browser-default custom-select mb-4" formControlName="age"  >
+                 
+                  <ion-select-option value="" disabled>Age range</ion-select-option>
+                  <ion-select-option value="Single 14-65">Single 14-65</ion-select-option>
+                  <ion-select-option value="Family 14-65">Family 14-65</ion-select-option>
+                  <ion-select-option value="Single 66-74">Single 66-74</ion-select-option>
+                  <ion-select-option value="Family 66-74">Family 66-74</ion-select-option>
+
+                  <ion-select-option value="Single 75-85">Single 75-85</ion-select-option>
+                  <ion-select-option value="Family 75-85">Family 75-85</ion-select-option>
+                  <ion-select-option value="Single 86-90">Single 86-90</ion-select-option>
+                  <ion-select-option value="Family 86-90">Family 86-90</ion-select-option>
+
+                 
+                          
+          </ion-select>
+              <ion-text color="danger">
+                  <p color="danger" style="margin-left: 5%;">{{ageErr}}</p>
+          </ion-text>
+  </ion-item>
+           <ion-item lines="none">
+                  <ion-button class="button button-block button-positive" routerLink="/products" > Cancel</ion-button>
+                  <ion-button class="button button-block button-positive" routerLink="/buynow10" > Submit</ion-button>
+           </ion-item>
+                      
+                 
+  </form>
+  
+</ion-content>
+
+

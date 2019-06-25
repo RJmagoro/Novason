@@ -1,0 +1,29 @@
+<ion-content>
+    <header>
+                    <!-- <ion-menu-button style="color:#fff"></ion-menu-button> --><br>
+                    <ion-img src="/assets/images/header.jpeg"></ion-img>
+    </header>
+    
+    <form [formGroup]="buynow" class="form1" >
+      <br>
+      <h4>Individual Cover</h4>
+      <h6>(Main member)</h6><br>
+      <h4>Premium : <b>R 00.00</b></h4><br>
+    </form>
+    <form [formGroup]="buynow" class="form2" >
+      <br>
+      <h3>How much cover do you want?</h3><br>
+      
+      
+        <ion-range  min="5000" max="30000" step="2000" pin=true snaps=true >
+          <ion-icon size="small" slot="start" name="remove-circle-outline"></ion-icon>
+          <ion-icon slot="end" name="add-circle-outline"></ion-icon>
+        </ion-range>
+        <ion-item lines="none"> 
+          <ion-button class="button button-block button-positive" routerLink="/buynow3" > Back</ion-button>
+          <ion-button class="button button-block button-positive" routerLink="/buynow5" > Next</ion-button>
+        </ion-item>
+      </form>
+      
+</ion-content>
+
